@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авторизация</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .auth {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .auth__image {
+      width: 200px;
+      margin-bottom: 20px;
+      transform: rotate(-10deg);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .auth__image img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .auth__form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .auth__field {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .auth__label {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .auth__input {
+      border: none;
+      border-bottom: 2px solid #000;
+      padding: 8px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .auth__button {
+      width: 100%;
+      padding: 10px;
+      background: #ddd;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+      text-align: center;
+    }
+
+    .auth__alt {
+      font-size: 14px;
+      margin-top: 5px;
+      color: #555;
+    }
+
+    .back-link {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    @media (min-width: 601px) and (max-width: 1024px) {
+      .auth {
+        max-width: 600px;
+      }
+
+      .auth__image {
+        width: 250px;
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .auth {
+        max-width: 700px;
+      }
+
+      .auth__image {
+        width: 300px;
+      }
+
+      .auth__button {
+        width: 60%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="Fotolenta.html" class="back-link">← Назад</a>
+  
+  <section class="auth">
+    <div class="auth__image">
+      <img src="https://picsum.photos/600/400?random=10" alt="Картинка">
+    </div>
+    <form class="auth__form">
+      <div class="auth__field">
+        <label class="auth__label" for="email">Email</label>
+        <input class="auth__input" type="email" id="email" placeholder="Email">
+      </div>
+      <div class="auth__field">
+        <label class="auth__label" for="password">Password</label>
+        <input class="auth__input" type="password" id="password" placeholder="Password">
+      </div>
+      <a href="Fotolenta.html" class="auth__button">Log In</a>
+      <div class="auth__alt">or Registration</div>
+    </form>
+  </section>
+</body>
+</html>
